@@ -120,7 +120,8 @@ public:
     }
   }
 
-  [[deprecated("use publish(*msg)")]]
+  [[deprecated("publishing an unique_ptr is prefered when using intra process communication."
+               " If using a shared_ptr, use publish(*msg).")]]
   virtual void
   publish(const std::shared_ptr<const MessageT> & msg)
   {
@@ -166,7 +167,8 @@ public:
     }
   }
 
-  [[deprecated("use publish(*msg)")]]
+  [[deprecated("publishing an unique_ptr is prefered when using intra process communication."
+               " If using a shared_ptr, use publish(*msg).")]]
   void
   publish(std::shared_ptr<const rcl_serialized_message_t> serialized_msg)
   {
