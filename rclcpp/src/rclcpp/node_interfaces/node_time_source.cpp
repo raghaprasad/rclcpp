@@ -43,7 +43,7 @@ NodeTimeSource::NodeTimeSource(
     node_logging_,
     node_clock_,
     node_parameters_);
-  time_source_.attachClock(node_clock_->get_clock());
+  // time_source_.attachClock(node_clock_->get_clock());
 }
 
 NodeTimeSource::~NodeTimeSource()

@@ -67,16 +67,16 @@ NodeParameters::NodeParameters(
   auto allocator = std::make_shared<AllocatorT>();
 
   if (start_parameter_services) {
-    parameter_service_ = std::make_shared<ParameterService>(node_base, node_services, this);
+    //parameter_service_ = std::make_shared<ParameterService>(node_base, node_services, this);
   }
 
   if (start_parameter_event_publisher) {
-    events_publisher_ = rclcpp::create_publisher<MessageT, AllocatorT, PublisherT>(
-      node_topics.get(),
-      "parameter_events",
-      parameter_event_qos_profile,
-      use_intra_process,
-      allocator);
+//    events_publisher_ = rclcpp::create_publisher<MessageT, AllocatorT, PublisherT>(
+//      node_topics.get(),
+//      "parameter_events",
+//      parameter_event_qos_profile,
+//      use_intra_process,
+//      allocator);
   }
 
   // Get the node options
