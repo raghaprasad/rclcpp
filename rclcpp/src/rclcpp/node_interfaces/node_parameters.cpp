@@ -303,7 +303,7 @@ NodeParameters::declare_parameter(
   }
 
   // Publish the event.
-  events_publisher_->publish(parameter_event);
+  // events_publisher_->publish(parameter_event);
 
   return parameters_.at(name).value;
 }
